@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'page2.dart';
 void main() {
   runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Named Routes ',
-      initialRoute: '/',
+      initialRoute: '/page2',
       routes: {
           '/': (context) => const MyApp(),
           '/page2': (context) =>  pageTwo(),
