@@ -78,15 +78,15 @@ class _MyAppState extends State<MyApp> {
                 ),
                 Flexible(
                   flex:1,
-                child:Container(
-                  margin: const EdgeInsets.fromLTRB(50,30,50,10),
-                  color: Colors.blue,
-                    child:Builder(
-                    builder: (context)=>Center(
-                      child: ElevatedButton(onPressed: ()=>{
-                        Navigator.pushNamed(context,
+                  child:Container(
+                    margin: const EdgeInsets.fromLTRB(50,30,50,10),
+                    color: Colors.blue,
+                      child:Builder(
+                        builder: (context)=>Center(
+                          child: ElevatedButton(onPressed: ()=>{
+                            Navigator.pushNamed(context,
                             '/page2')
-                      },
+                          },
                           child:const Text("Login")),
                     ),
                     ),

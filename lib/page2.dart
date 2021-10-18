@@ -37,9 +37,10 @@ class _pageTwoState extends State<pageTwo> {
                                   width: 396,
                                   height: 82,
                                   color: const Color.fromARGB(255, 208, 83, 83),
-                                  child: const Center(child:Text("Dodaj Opłate"),),
+                                  child: const Center(child:Text("Dodaj Opłate", style: TextStyle(fontSize:48,),),
                                ),
                               ),
+                              )
                         ]
                         )
                       ),
@@ -55,7 +56,7 @@ class _pageTwoState extends State<pageTwo> {
                                 width: 189,
                                 height: 202,
                                 color: const Color.fromARGB(255, 208, 83, 83),
-                                child: Text("Do Zapłaty"),
+                                child: const Text("Do Zapłaty",style: TextStyle(fontSize:38,),),
                             ),
                             ),
                             GestureDetector(
@@ -67,10 +68,17 @@ class _pageTwoState extends State<pageTwo> {
                                 width: 189,
                                 height: 202,
                                 color: const Color.fromARGB(255, 208, 83, 83),
-                                child: Text("Zapłacono"),
+                                child: const Text("Zapłacono",style: TextStyle(fontSize:38,),),
                             ),
                             ),
                           ],
+                        ),
+                      ),
+                      Container(
+                        width: 395,
+                        height: 236,
+                        color: const Color.fromARGB(255, 208, 83, 83),
+                        child: const Center(child:Text("Statistic",style: TextStyle(fontSize:38,),),
                         ),
                       ),
                     ]
