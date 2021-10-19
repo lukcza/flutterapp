@@ -38,13 +38,15 @@ class _MyAppState extends State<MyApp> {
                 Flexible(
                   flex:1,
                 child:Container(
-                  margin: const EdgeInsets.fromLTRB(50,30,50,10),
-                  color: Colors.red,
-                    child:SizedBox(
-                      height: 100,
-                      child:Column(
-                      children: const <Widget>[
-                        TextField(
+                    padding: const EdgeInsets.all(5),
+                    margin: const EdgeInsets.fromLTRB(50,30,50,10),
+                    color: Colors.red,
+                      child:SizedBox(
+                        height: 65,
+                        width: 300,
+                        child:Column(
+                        children: const <Widget>[
+                         TextField(
                           decoration: InputDecoration(
                             icon: Icon(
                               Icons.account_circle_outlined,
@@ -61,16 +63,20 @@ class _MyAppState extends State<MyApp> {
                 Flexible(
                 flex:1,
                 child:Container(
+                  padding: const EdgeInsets.all(5),
                   margin: const EdgeInsets.fromLTRB(50,30,50,10),
                   color: Colors.green,
-                    child:Column(
-                    children: const <Widget>[
-                      TextField(
+                    child:SizedBox(
+                      height: 65,
+                      width: 300,
+                      child:Column(
+                        children: const <Widget>[
+                        TextField(
                         obscureText: true ,
                         obscuringCharacter: "*" ,
                         decoration: InputDecoration(
                           icon: Icon(
-                            Icons.account_circle_outlined,
+                            Icons.vpn_key_outlined,
                             color: Color.fromARGB(255,25,25,25),
                           ) ,
 
@@ -79,6 +85,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                     ],
                     ),
+                )
                 ),
                 ),
                 Flexible(
