@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'page2.dart';
 void main() {
   runApp(MaterialApp(
-      debugShowCheckedModeBanner: false,
+
       title: 'Named Routes ',
-      initialRoute: '/page2',
+      initialRoute: '/',
       routes: {
           '/': (context) => const MyApp(),
           '/page2': (context) =>  pageTwo(),
@@ -23,6 +23,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         routes: {
             '/page2':(context) =>  pageTwo()
         },
@@ -40,6 +41,7 @@ class _MyAppState extends State<MyApp> {
                   margin: const EdgeInsets.fromLTRB(50,30,50,10),
                   color: Colors.red,
                     child:SizedBox(
+                      height: 100,
                       child:Column(
                       children: const <Widget>[
                         TextField(
@@ -64,12 +66,15 @@ class _MyAppState extends State<MyApp> {
                     child:Column(
                     children: const <Widget>[
                       TextField(
+                        obscureText: true ,
+                        obscuringCharacter: "*" ,
                         decoration: InputDecoration(
                           icon: Icon(
                             Icons.account_circle_outlined,
                             color: Color.fromARGB(255,25,25,25),
                           ) ,
-                          hintText: "login",
+
+                          hintText: "Password",
                         ),
                       ),
                     ],
