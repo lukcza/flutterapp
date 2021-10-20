@@ -12,7 +12,8 @@ class _pageTwoState extends State<pageTwo> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Scaffold(
+      home:WillPopScope(
+      child:Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 241, 232, 184),
@@ -88,6 +89,14 @@ class _pageTwoState extends State<pageTwo> {
           ),
         ),
       ),
+        onWillPop: () => showDialog<bool>(
+            context: context,
+            builder: (c) => AlertDialog(
+              title: Text('Warining'),
+
+            ),
+        )
+    )
     );
   }
 }
