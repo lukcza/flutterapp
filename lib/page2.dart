@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'loginpage.dart';
 class pageTwo extends StatefulWidget {
   @override
   _pageTwoState createState() => _pageTwoState();
@@ -11,9 +11,10 @@ class _pageTwoState extends State<pageTwo> {
 
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {"/page":(context)=>const MyApp()},
       debugShowCheckedModeBanner: false,
-      home:WillPopScope(
-      child:Scaffold(
+      // home:WillPopScope(
+      home:Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 241, 232, 184),
@@ -27,19 +28,21 @@ class _pageTwoState extends State<pageTwo> {
                       Container(
                         child:Column(
                             children:[
-                              GestureDetector(
-                               onTap: ()
-                                {
-                                print("dodano podatek");
-                                },
-                                child: Container(
-                                  margin: EdgeInsets.fromLTRB(10, 20, 10, 10),
-                                  alignment: Alignment.center,
-                                  width: 396,
-                                  height: 82,
-                                  color: const Color.fromARGB(255, 208, 83, 83),
-                                  child: const Center(child:Text("Dodaj Opłate", style: TextStyle(fontSize:48,),),
+                              Builder(
+                                builder: (context)=> GestureDetector(
+                                  onTap: ()=>{
+                                    Navigator.pushNamed(context,
+                                    '/')
+                                    },
+                                  child: Container(
+                                    margin: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+                                    alignment: Alignment.center,
+                                    width: 396,
+                                    height: 82,
+                                    color: const Color.fromARGB(255, 208, 83, 83),
+                                    child: const Center(child:Text("Dodaj Opłate", style: TextStyle(fontSize:48,),),
                                ),
+                              ),
                               ),
                               )
                         ]
@@ -89,14 +92,13 @@ class _pageTwoState extends State<pageTwo> {
           ),
         ),
       ),
-        onWillPop: () => showDialog<bool>(
-            context: context,
-            builder: (c) => AlertDialog(
-              title: Text('Warining'),
-
-            ),
-        )
-    )
+    //     onWillPop: () => showDialog<bool>(
+    //         context: context,
+    //         builder: (c) => AlertDialog(
+    //           title: Text('Warining'),
+    //         ),
+    //     )
+    // )
     );
   }
 }
