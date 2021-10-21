@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'page2.dart';
+import 'page3.dart';
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -13,7 +14,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/page2':(context) =>  pageTwo()
+        '/page3':(context) =>  page3(),
       },
       home: Scaffold(
 
